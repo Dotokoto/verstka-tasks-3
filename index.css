@@ -1,0 +1,124 @@
+
+html, body
+{
+    margin: 0;
+}
+
+section
+{
+    margin: 50px 80px 10px 80px;
+}
+
+table
+{
+    margin: 20px 0;
+    font-size: 14px;
+    font-family: sans-serif;
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+tr:nth-child(2n+1) {
+    background-color: #ebebeb;
+}
+
+th
+{
+    font-weight: 700;
+    background-color: #6dff6a;
+    padding: 10px 10px;
+}
+
+td
+{
+    padding: 10px;
+    min-height: 94px;
+    text-align: center;
+}
+
+tr:hover
+{
+    background-color: rgba(160, 235, 42, 0.35);
+}
+
+td:hover
+{
+    position: relative;
+}
+td:hover::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -2000px;
+    height: 5000px;
+    width: 100%;
+    background-color: #a0eb2a;
+    pointer-events: none;
+    opacity: 0.35;
+}
+
+form
+{
+    font-size: 18px;
+    font-family: serif;
+    margin: 0 0 0 80px;
+}
+
+form:valid button
+{
+    display: block;
+}
+
+input:not(:valid)
+{
+    border: 2px outset #f00;
+}
+
+form:not(:valid) button
+{
+    display: none;
+}
+
+label
+{
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 30px;
+}
+
+.form-field
+{
+    clear: both;
+    text-align: right;
+}
+
+.form-wrapper
+{
+    float: left;
+}
+
+.in-radio:checked ~ table .in
+{
+    display: table-row;
+}
+
+.in-radio:checked ~ table .out
+{
+    display: none;
+}
+
+.out-radio:checked ~ table .in
+{
+    display: none;
+}
+
+.out-radio:checked ~ table .out
+{
+    display: table-row;
+}

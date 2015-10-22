@@ -6,13 +6,375 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <!-- Поле для фильтрации по городу -->
-        <input
-            type="text"
-            placeholder="Город отправления"
-            value=""
-            onkeyup="this.setAttribute('value', this.value)">
-
-        <!-- Здесь применять вашу самую сильную магию -->
+        <section>
+            <header>
+                <h1>Онлайн табло</h1>
+            </header>
+            <input
+                type="text"
+                placeholder="Город отправления"
+                value=""
+                onkeyup="this.setAttribute('value', this.value)">
+            <br>
+            <input class="in-radio" type="radio" name="in-out" value="in">
+            <img src="img/in.png" alt="В Екатеринбург">
+            В Екатеринбург
+            <input class="out-radio" type="radio" name="in-out" value="out">
+            <img src="img/out.png" alt="Из Екатеринбурга">
+            Из Екатеринбурга
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Тип рейса</th>
+                        <th>Номер рейса</th>
+                        <th>Авиакомпания</th>
+                        <th>Тип воздушного судна</th>
+                        <th>Направление</th>
+                        <th>Плановое время прилёта/вылета</th>
+                        <th>Фактическое/ожидаемое время</th>
+                        <th>Терминал</th>
+                        <th>Выходы</th>
+                        <th>Статус рейса</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Тип рейса</th>
+                        <th>Номер рейса</th>
+                        <th>Авиакомпания</th>
+                        <th>Тип воздушного судна</th>
+                        <th>Направление</th>
+                        <th>Плановое время прилёта/вылета</th>
+                        <th>Фактическое/ожидаемое время</th>
+                        <th>Терминал</th>
+                        <th>Выходы</th>
+                        <th>Статус рейса</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr class="in">
+                        <td>
+                            <img src="img/in.png" alt="В Екатеринбург">
+                        </td>
+                        <td>U6-726</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/416.gif"
+                                alt="Ural Airlines"
+                                title="Уральские авиалинии">
+                            <br>
+                        </td>
+                        <td>A-319</td>
+                        <td>ТЕЛЬ-АВИВ</td>
+                        <td>21 Окт 16:45</td>
+                        <td>16:26</td>
+                        <td>B</td>
+                        <td></td>
+                        <td>Прибыл</td>
+                    </tr>
+                    <tr class="in">
+                        <td>
+                            <img src="img/in.png" alt="В Екатеринбург">
+                        </td>
+                        <td>SU-5852</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/397.gif"
+                                alt="Aeroflot"
+                                title="Аэрофлот">
+                            <br>
+                        </td>
+                        <td>B-737-800W</td>
+                        <td>СИМФЕРОПОЛЬ</td>
+                        <td>21 Окт 16:35</td>
+                        <td>16:37</td>
+                        <td>A</td>
+                        <td></td>
+                        <td>Прибыл</td>
+                    </tr>
+                    <tr class="out">
+                        <td>
+                            <img src="img/out.png" alt="Из Екатеринбурга">
+                        </td>
+                        <td>AZ-3785</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/56.gif"
+                                alt="Alitalia"
+                                title="Alitalia">
+                            <br>
+                        </td>
+                        <td>B-737-800W</td>
+                        <td>МОСКВА/ШРМ</td>
+                        <td>21 Окт 17:15</td>
+                        <td>17:32</td>
+                        <td>A</td>
+                        <td>13</td>
+                        <td>Вылетел</td>
+                    </tr>
+                    <tr class="out">
+                        <td>
+                            <img src="img/out.png" alt="Из Екатеринбурга">
+                        </td>
+                        <td>4G-936</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/361.gif"
+                                alt="Gazprom Avia"
+                                title="Газпром Авиа">
+                            <br>
+                        </td>
+                        <td>ЯК-40К</td>
+                        <td>СОВЕТСКИЙ</td>
+                        <td>21 Окт 19:00</td>
+                        <td>19:00</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>Посадка закончена</td>
+                    </tr>
+                    <tr class="out">
+                        <td>
+                            <img src="img/out.png" alt="Из Екатеринбурга">
+                        </td>
+                        <td>YC-102</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/317.gif"
+                                alt="Yamal Avia"
+                                title="Ямал Авиа">
+                            <br>
+                        </td>
+                        <td>CRJ-200</td>
+                        <td>ТЮМЕНЬ</td>
+                        <td>21 Окт 19:25</td>
+                        <td>19:25</td>
+                        <td>A</td>
+                        <td>16</td>
+                        <td>Идет посадка</td>
+                    </tr>
+                    <tr class="out">
+                        <td>
+                            <img src="img/out.png" alt="Из Екатеринбурга">
+                        </td>
+                        <td>BA-8784</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/59.gif"
+                                alt="British Airways"
+                                title="British Airways">
+                            <br>
+                        </td>
+                        <td>A-319</td>
+                        <td>МОСКВА/ДМД</td>
+                        <td>21 Окт 19:50</td>
+                        <td>19:50</td>
+                        <td>A</td>
+                        <td>9</td>
+                        <td>Идет регистрация</td>
+                    </tr>
+                    <tr class="out">
+                        <td>
+                            <img src="img/out.png" alt="Из Екатеринбурга">
+                        </td>
+                        <td>U6-3724</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/416.gif"
+                                alt="Ural Airlines"
+                                title="Уральские авиалинии">
+                            <br>
+                        </td>
+                        <td>A-321</td>
+                        <td>АНТАЛЬЯ</td>
+                        <td>21 Окт 20:30</td>
+                        <td>23:00</td>
+                        <td>B</td>
+                        <td></td>
+                        <td>Задержка - позднее прибытие</td>
+                    </tr>
+                    <tr class="in">
+                        <td>
+                            <img src="img/in.png" alt="В Екатеринбург">
+                        </td>
+                        <td>SU-1406</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/397.gif"
+                                alt="Aeroflot"
+                                title="Аэрофлот">
+                            <br>
+                        </td>
+                        <td>A-321</td>
+                        <td>МОСКВА/ШРМ</td>
+                        <td>22 Окт 01:40</td>
+                        <td>01:40</td>
+                        <td>A</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="in">
+                        <td>
+                            <img src="img/in.png" alt="В Екатеринбург">
+                        </td>
+                        <td>UN-109</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/429.gif"
+                                alt="Transaero"
+                                title="Трансаэро">
+                            <br>
+                        </td>
+                        <td>B-737-700</td>
+                        <td>МОСКВА/ВНК</td>
+                        <td>23 Окт 03:25</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Отмена</td>
+                    </tr>
+                    <tr class="in">
+                        <td>
+                            <img src="img/in.png" alt="В Екатеринбург">
+                        </td>
+                        <td>AY-151</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/55.gif"
+                                alt="Finnair"
+                                title="Finnair">
+                            <br>
+                        </td>
+                        <td>A-319</td>
+                        <td>ХЕЛЬСИНКИ</td>
+                        <td>23 Окт 04:55</td>
+                        <td>04:55</td>
+                        <td>B</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="in">
+                        <td >
+                            <img src="img/in.png" alt="В Екатеринбург">
+                        </td>
+                        <td>N4-8820</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/1411.gif"
+                                alt="Nordwind"
+                                title="Nordwind Airlines">
+                            <br>
+                        </td>
+                        <td>A-321</td>
+                        <td>ШАРМ ЭЛЬ ШЕЙХ</td>
+                        <td>22 Окт 04:00</td>
+                        <td>04:00</td>
+                        <td>B</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="in">
+                        <td>
+                            <img src="img/in.png" alt="В Екатеринбург">
+                        </td>
+                        <td>7R-8503</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/382.gif"
+                                alt="RusLine"
+                                title="РусЛайн">
+                            <br>
+                        </td>
+                        <td>CRJ-200</td>
+                        <td>С-ПЕТЕРБУРГ</td>
+                        <td>23 Окт 02:00</td>
+                        <td>02:00</td>
+                        <td>A</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="in">
+                        <td>
+                            <img src="img/in.png" alt="В Екатеринбург">
+                        </td>
+                        <td>OK-5912</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/135.gif"
+                                alt="Czech Airlines"
+                                title="Czech Airlines">
+                            <br>
+                        </td>
+                        <td>A-320</td>
+                        <td>ПРАГА</td>
+                        <td>23 Окт 00:35</td>
+                        <td>00:35</td>
+                        <td>B</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="out">
+                        <td>
+                            <img src="img/out.png" alt="Из Екатеринбурга">
+                        </td>
+                        <td>ZF-3579</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/313.gif"
+                                alt="AzurAir"
+                                title="AzurAir">
+                            <br>
+                        </td>
+                        <td>B-767-300</td>
+                        <td>НЯЧАНГ</td>
+                        <td>23 Окт 03:15</td>
+                        <td>03:15</td>
+                        <td>B</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="out">
+                        <td>
+                            <img src="img/out.png" alt="Из Екатеринбурга">
+                        </td>
+                        <td>7R-57Д</td>
+                        <td>
+                            <img
+                                src="http://www.koltsovo.ru/attels/logo4site/382.gif"
+                                alt="RusLine"
+                                title="РусЛайн">
+                            <br>
+                        </td>
+                        <td>CRJ-200</td>
+                        <td>УФА</td>
+                        <td>23 Окт 02:50</td>
+                        <td>02:50</td>
+                        <td>A</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <form action="" method="get">
+            <label></label>
+            <div class="form-wrapper">
+                <div class="form-field">
+                    <label for="phone">Телефон:</label>
+                    <input
+                        id="phone"
+                        name="phone"
+                        type="text"
+                        pattern="^\+?\d{0,3}?\s*(?:\(\d{3}\)|\d{3})\s*\d{3}(?:-|\s+)?\d(?:-|\s+)?\d{3}$"
+                        placeholder="Введите номер телефона"
+                        required>
+                </div>
+                <div class="form-field">
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="email" placeholder="Введите Email" required>
+                </div>
+                <button type="submit">Отправить данные о рейсе на телефон</button>
+            </div>
+        </form>
     </body>
 </html>
