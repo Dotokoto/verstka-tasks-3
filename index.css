@@ -1,12 +1,13 @@
 
-html, body
+html,
+body
 {
     margin: 0;
 }
 
 section
 {
-    margin: 50px 80px 10px 80px;
+    margin: 50px 80px 10px;
 }
 
 table
@@ -18,7 +19,8 @@ table
     overflow: hidden;
 }
 
-tr:nth-child(2n+1) {
+tr:nth-child(2n+1)
+{
     background-color: #ebebeb;
 }
 
@@ -103,22 +105,55 @@ h1
     float: left;
 }
 
-.in-radio:checked ~ table .in
+table tbody tr
+{
+    display: none;
+}
+
+.in-radio:checked ~ table tbody .in,
+.out-radio:checked ~ table tbody .out,
+.all-dest-radio:checked
 {
     display: table-row;
 }
 
-.in-radio:checked ~ table .out
+.in-radio:checked ~ table tbody .out,
+.out-radio:checked ~ table tbody .in
 {
     display: none;
 }
 
-.out-radio:checked ~ table .in
+.term-a-radio:checked ~ table tbody .term-a,
+.term-b-radio:checked ~ table tbody .term-b,
+.term-all-radio:checked ~ table tbody tr
+{
+    display: table-row;
+}
+
+.term-a-radio:checked ~ table tbody tr:not(.term-a),
+.term-b-radio:checked ~ table tbody tr:not(.term-b)
 {
     display: none;
 }
 
-.out-radio:checked ~ table .out
+.city-search[value=""] ~ table tbody tr,
+.city-search[value="Тель-Авив"] ~ table tbody tr[direction="Тель-Авив"],
+.city-search[value="Симферополь"] ~ table tbody tr[direction="Симферополь"],
+.city-search[value="Москва/шрм"] ~ table tbody tr[direction="Москва/шрм"],
+.city-search[value="Советский"] ~ table tbody tr[direction="Советский"],
+.city-search[value="Тюмень"] ~ table tbody tr[direction="Тюмень"],
+.city-search[value="Москва/дмд"] ~ table tbody tr[direction="Москва/дмд"],
+.city-search[value="Анталья"] ~ table tbody tr[direction="Анталья"],
+.city-search[value="Москва/внк"] ~ table tbody tr[direction="Москва/внк"],
+.city-search[value="Хельсинки"] ~ table tbody tr[direction="Хельсинки"],
+.city-search[value="Москва"] ~ table tbody tr[direction*="Москва"],
+.city-search[value="Домодедово"] ~ table tbody tr[direction="Москва/дмд"],
+.city-search[value="Внуково"] ~ table tbody tr[direction="Москва/внк"],
+.city-search[value="Шереметьево"] ~ table tbody tr[direction="Москва/шрм"],
+.city-search[value="Прага"] ~ table tbody tr[direction="Прага"],
+.city-search[value="Нячанг"] ~ table tbody tr[direction="Нячанг"],
+.city-search[value="Шарм Эль Шейх"] ~ table tbody tr[direction="Шарм Эль Шейх"],
+.city-search[value="Уфа"] ~ table tbody tr[direction="Уфа"]
 {
     display: table-row;
 }

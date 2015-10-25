@@ -11,18 +11,27 @@
                 <h1>Онлайн табло</h1>
             </header>
             <input
+                class="city-search"
                 type="text"
                 placeholder="Город отправления"
                 value=""
                 onkeyup="this.setAttribute('value', this.value)">
             <br>
-            <input class="in-radio" type="radio" name="in-out" value="in">
+            <input class="in-radio" type="radio" name="radio" value="in">
             <img src="img/in.png" alt="В Екатеринбург">
             В Екатеринбург
-            <input class="out-radio" type="radio" name="in-out" value="out">
+            <input class="out-radio" type="radio" name="radio" value="out">
             <img src="img/out.png" alt="Из Екатеринбурга">
             Из Екатеринбурга
+            <input class="all-dest-radio" type="radio" name="radio" value="all-dest">
+            Все
             <br>
+            <input class="term-a-radio" type="radio" name="radio" value="term-a">
+            Терминал A
+            <input class="term-b-radio" type="radio" name="radio" value="term-b">
+            Терминал B
+            <input class="term-all-radio" type="radio" name="radio" value="term-all">
+            Все
             <table>
                 <thead>
                     <tr>
@@ -39,7 +48,7 @@
                     </tr>
                 </thead>
                 <tfoot>
-                    <tr>
+                    <tr class="term-a term-b">
                         <th>Тип рейса</th>
                         <th>Номер рейса</th>
                         <th>Авиакомпания</th>
@@ -53,7 +62,7 @@
                     </tr>
                 </tfoot>
                 <tbody>
-                    <tr class="in">
+                    <tr class="in term-b" direction="Тель-Авив">
                         <td>
                             <img src="img/in.png" alt="В Екатеринбург">
                         </td>
@@ -73,7 +82,7 @@
                         <td></td>
                         <td>Прибыл</td>
                     </tr>
-                    <tr class="in">
+                    <tr class="in term-a" direction="Симферополь">
                         <td>
                             <img src="img/in.png" alt="В Екатеринбург">
                         </td>
@@ -93,7 +102,7 @@
                         <td></td>
                         <td>Прибыл</td>
                     </tr>
-                    <tr class="out">
+                    <tr class="out term-a" direction="Москва/шрм">
                         <td>
                             <img src="img/out.png" alt="Из Екатеринбурга">
                         </td>
@@ -113,7 +122,7 @@
                         <td>13</td>
                         <td>Вылетел</td>
                     </tr>
-                    <tr class="out">
+                    <tr class="out term-a" direction="Советский">
                         <td>
                             <img src="img/out.png" alt="Из Екатеринбурга">
                         </td>
@@ -133,7 +142,7 @@
                         <td>10</td>
                         <td>Посадка закончена</td>
                     </tr>
-                    <tr class="out">
+                    <tr class="out term-a" direction="Тюмень">
                         <td>
                             <img src="img/out.png" alt="Из Екатеринбурга">
                         </td>
@@ -153,7 +162,7 @@
                         <td>16</td>
                         <td>Идет посадка</td>
                     </tr>
-                    <tr class="out">
+                    <tr class="out term-a" direction="Москва/дмд">
                         <td>
                             <img src="img/out.png" alt="Из Екатеринбурга">
                         </td>
@@ -173,7 +182,7 @@
                         <td>9</td>
                         <td>Идет регистрация</td>
                     </tr>
-                    <tr class="out">
+                    <tr class="out term-b" direction="Анталья">
                         <td>
                             <img src="img/out.png" alt="Из Екатеринбурга">
                         </td>
@@ -193,7 +202,7 @@
                         <td></td>
                         <td>Задержка - позднее прибытие</td>
                     </tr>
-                    <tr class="in">
+                    <tr class="in term-a" direction="Москва/шрм">
                         <td>
                             <img src="img/in.png" alt="В Екатеринбург">
                         </td>
@@ -213,7 +222,7 @@
                         <td></td>
                         <td></td>
                     </tr>
-                    <tr class="in">
+                    <tr class="in" direction="Москва/внк">
                         <td>
                             <img src="img/in.png" alt="В Екатеринбург">
                         </td>
@@ -233,7 +242,7 @@
                         <td></td>
                         <td>Отмена</td>
                     </tr>
-                    <tr class="in">
+                    <tr class="in term-b" direction="Хельсинки">
                         <td>
                             <img src="img/in.png" alt="В Екатеринбург">
                         </td>
@@ -253,7 +262,7 @@
                         <td></td>
                         <td></td>
                     </tr>
-                    <tr class="in">
+                    <tr class="in term-b" direction="Шарм Эль Шейх">
                         <td >
                             <img src="img/in.png" alt="В Екатеринбург">
                         </td>
@@ -273,7 +282,7 @@
                         <td></td>
                         <td></td>
                     </tr>
-                    <tr class="in">
+                    <tr class="in term-a" direction="Санкт-Петербург">
                         <td>
                             <img src="img/in.png" alt="В Екатеринбург">
                         </td>
@@ -286,14 +295,14 @@
                             <br>
                         </td>
                         <td>CRJ-200</td>
-                        <td>С-ПЕТЕРБУРГ</td>
+                        <td>САНКТ-ПЕТЕРБУРГ</td>
                         <td>23 Окт 02:00</td>
                         <td>02:00</td>
                         <td>A</td>
                         <td></td>
                         <td></td>
                     </tr>
-                    <tr class="in">
+                    <tr class="in term-b" direction="Прага">
                         <td>
                             <img src="img/in.png" alt="В Екатеринбург">
                         </td>
@@ -313,7 +322,7 @@
                         <td></td>
                         <td></td>
                     </tr>
-                    <tr class="out">
+                    <tr class="out term-b" direction="Нячанг">
                         <td>
                             <img src="img/out.png" alt="Из Екатеринбурга">
                         </td>
@@ -333,7 +342,7 @@
                         <td></td>
                         <td></td>
                     </tr>
-                    <tr class="out">
+                    <tr class="out term-a" direction="Уфа">
                         <td>
                             <img src="img/out.png" alt="Из Екатеринбурга">
                         </td>
@@ -357,7 +366,6 @@
             </table>
         </section>
         <form action="" method="get">
-            <label></label>
             <div class="form-wrapper">
                 <div class="form-field">
                     <label for="phone">Телефон:</label>
@@ -365,13 +373,19 @@
                         id="phone"
                         name="phone"
                         type="text"
-                        pattern="^\+?\d{0,3}?\s*(?:\(\d{3}\)|\d{3})\s*\d{3}(?:-|\s+)?\d(?:-|\s+)?\d{3}$"
+                        pattern="^\+?\d{11}$"
                         placeholder="Введите номер телефона"
                         required>
                 </div>
                 <div class="form-field">
                     <label for="email">Email:</label>
-                    <input id="email" name="email" type="email" placeholder="Введите Email" required>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        pattern="^[^\.@]+@[^\.@]+\.[^@]+$"
+                        placeholder="Введите Email"
+                        required>
                 </div>
                 <button type="submit">Отправить данные о рейсе на телефон</button>
             </div>
