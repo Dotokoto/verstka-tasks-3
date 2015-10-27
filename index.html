@@ -17,21 +17,40 @@
                 value=""
                 onkeyup="this.setAttribute('value', this.value)">
             <br>
-            <input class="in-radio" type="radio" name="radio" value="in">
-            <img src="img/in.png" alt="В Екатеринбург">
-            В Екатеринбург
-            <input class="out-radio" type="radio" name="radio" value="out">
-            <img src="img/out.png" alt="Из Екатеринбурга">
-            Из Екатеринбурга
-            <input class="all-dest-radio" type="radio" name="radio" value="all-dest">
-            Все
+            <input id="in-radio" class="in-radio" type="radio" name="in-out" value="in">
+            <label for="in-radio">
+                <img src="img/in.png" alt="В Екатеринбург">
+                В Екатеринбург
+            </label>
+            <input id="out-radio" class="out-radio" type="radio" name="in-out" value="out">
+            <label for="out-radio">
+                <img src="img/out.png" alt="Из Екатеринбурга">
+                Из Екатеринбурга
+            </label>
+            <input id="all-dest-radio" class="all-dest-radio"
+                   type="radio" name="in-out" value="all-dest" checked>
+            <label for="all-dest-radio">
+                <img src="img/in.png">
+                <img src="img/out.png">
+                Всe
+            </label>
             <br>
-            <input class="term-a-radio" type="radio" name="radio" value="term-a">
-            Терминал A
-            <input class="term-b-radio" type="radio" name="radio" value="term-b">
-            Терминал B
-            <input class="term-all-radio" type="radio" name="radio" value="term-all">
-            Все
+            <br>
+            <input id="term-a-radio" class="term-a-radio"
+                   type="radio" name="radio-term" value="term-a">
+            <label for="term-a-radio">
+                Терминал A
+            </label>
+            <input id="term-b-radio" class="term-b-radio"
+                   type="radio" name="radio-term" value="term-b">
+            <label for="term-b-radio">
+                Терминал B
+            </label>
+            <input id="term-all-radio" class="term-all-radio"
+                   type="radio" name="radio-term" value="term-all" checked>
+            <label for="term-all-radio">
+                Все
+            </label>
             <table>
                 <thead>
                     <tr>
@@ -222,7 +241,7 @@
                         <td></td>
                         <td></td>
                     </tr>
-                    <tr class="in" direction="Москва/внк">
+                    <tr class="in term-a term-b" direction="Москва/внк">
                         <td>
                             <img src="img/in.png" alt="В Екатеринбург">
                         </td>
@@ -374,7 +393,7 @@
                         name="phone"
                         type="text"
                         pattern="^\+?\d{11}$"
-                        placeholder="Введите номер телефона"
+                        placeholder="+79876543210"
                         required>
                 </div>
                 <div class="form-field">
@@ -382,7 +401,6 @@
                     <input
                         id="email"
                         name="email"
-                        type="email"
                         pattern="^[^\.@]+@[^\.@]+\.[^@]+$"
                         placeholder="Введите Email"
                         required>

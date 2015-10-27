@@ -87,6 +87,10 @@ label
     float: left;
     margin: 0 10px 0 0;
 }
+input[type="radio"]
+{
+    float: left;
+}
 
 h1
 {
@@ -110,50 +114,56 @@ table tbody tr
     display: none;
 }
 
-.in-radio:checked ~ table tbody .in,
-.out-radio:checked ~ table tbody .out,
-.all-dest-radio:checked
+.in-radio:checked ~ .term-a-radio:checked ~ table tbody .term-a,
+.in-radio:checked ~ .term-a-radio:checked ~ table tbody .in,
+.in-radio:checked ~ .term-b-radio:checked ~ table tbody .term-b,
+.in-radio:checked ~ .term-b-radio:checked ~ table tbody .in,
+.out-radio:checked ~ .term-a-radio:checked ~ table tbody .term-a,
+.out-radio:checked ~ .term-a-radio:checked ~ table tbody .out,
+.out-radio:checked ~ .term-b-radio:checked ~ table tbody .term-b,
+.out-radio:checked ~ .term-b-radio:checked ~ table tbody .out,
+.in-radio:checked ~ .term-all-radio:checked ~ table tbody .in,
+.out-radio:checked ~ .term-all-radio:checked ~ table tbody .out,
+.all-dest-radio:checked ~ .term-a-radio:checked ~ table tbody .term-a,
+.all-dest-radio:checked ~ .term-b-radio:checked ~ table tbody .term-b,
+.all-dest-radio:checked ~ .term-all-radio:checked ~ table tbody tr
 {
     display: table-row;
 }
 
-.in-radio:checked ~ table tbody .out,
-.out-radio:checked ~ table tbody .in
+.in-radio:checked ~ .term-a-radio:checked ~ table tbody .term-b,
+.in-radio:checked ~ .term-a-radio:checked ~ table tbody .out,
+.in-radio:checked ~ .term-b-radio:checked ~ table tbody .term-a,
+.in-radio:checked ~ .term-b-radio:checked ~ table tbody .out,
+.out-radio:checked ~ .term-a-radio:checked ~ table tbody .term-b,
+.out-radio:checked ~ .term-a-radio:checked ~ table tbody .in,
+.out-radio:checked ~ .term-b-radio:checked ~ table tbody .term-a,
+.out-radio:checked ~ .term-b-radio:checked ~ table tbody .in,
+.all-dest-radio:checked ~ .term-a-radio:checked ~ table tbody .term-b,
+.all-dest-radio:checked ~ .term-b-radio:checked ~ table tbody .term-a,
+.in-radio:checked ~ .term-all-radio:checked ~ table tbody .out,
+.out-radio:checked ~ .term-all-radio:checked ~ table tbody .in
 {
     display: none;
 }
 
-.term-a-radio:checked ~ table tbody .term-a,
-.term-b-radio:checked ~ table tbody .term-b,
-.term-all-radio:checked ~ table tbody tr
+.city-search[value="Тель-Авив"] ~ table tbody tr:not([direction="Тель-Авив"]),
+.city-search[value="Симферополь"] ~ table tbody tr:not([direction="Симферополь"]),
+.city-search[value="Москва/шрм"] ~ table tbody tr:not([direction="Москва/шрм"]),
+.city-search[value="Советский"] ~ table tbody tr:not([direction="Советский"]),
+.city-search[value="Тюмень"] ~ table tbody tr:not([direction="Тюмень"]),
+.city-search[value="Москва/дмд"] ~ table tbody tr:not([direction="Москва/дмд"]),
+.city-search[value="Анталья"] ~ table tbody tr:not([direction="Анталья"]),
+.city-search[value="Москва/внк"] ~ table tbody tr:not([direction="Москва/внк"]),
+.city-search[value="Хельсинки"] ~ table tbody tr:not([direction="Хельсинки"]),
+.city-search[value="Москва"] ~ table tbody tr:not([direction*="Москва"]),
+.city-search[value="Домодедово"] ~ table tbody tr:not([direction="Москва/дмд"]),
+.city-search[value="Внуково"] ~ table tbody tr:not([direction="Москва/внк"]),
+.city-search[value="Шереметьево"] ~ table tbody tr:not([direction="Москва/шрм"]),
+.city-search[value="Прага"] ~ table tbody tr:not([direction="Прага"]),
+.city-search[value="Нячанг"] ~ table tbody tr:not([direction="Нячанг"]),
+.city-search[value="Шарм Эль Шейх"] ~ table tbody tr:not([direction="Шарм Эль Шейх"]),
+.city-search[value="Уфа"] ~ table tbody tr:not([direction="Уфа"])
 {
-    display: table-row;
-}
-
-.term-a-radio:checked ~ table tbody tr:not(.term-a),
-.term-b-radio:checked ~ table tbody tr:not(.term-b)
-{
-    display: none;
-}
-
-.city-search[value=""] ~ table tbody tr,
-.city-search[value="Тель-Авив"] ~ table tbody tr[direction="Тель-Авив"],
-.city-search[value="Симферополь"] ~ table tbody tr[direction="Симферополь"],
-.city-search[value="Москва/шрм"] ~ table tbody tr[direction="Москва/шрм"],
-.city-search[value="Советский"] ~ table tbody tr[direction="Советский"],
-.city-search[value="Тюмень"] ~ table tbody tr[direction="Тюмень"],
-.city-search[value="Москва/дмд"] ~ table tbody tr[direction="Москва/дмд"],
-.city-search[value="Анталья"] ~ table tbody tr[direction="Анталья"],
-.city-search[value="Москва/внк"] ~ table tbody tr[direction="Москва/внк"],
-.city-search[value="Хельсинки"] ~ table tbody tr[direction="Хельсинки"],
-.city-search[value="Москва"] ~ table tbody tr[direction*="Москва"],
-.city-search[value="Домодедово"] ~ table tbody tr[direction="Москва/дмд"],
-.city-search[value="Внуково"] ~ table tbody tr[direction="Москва/внк"],
-.city-search[value="Шереметьево"] ~ table tbody tr[direction="Москва/шрм"],
-.city-search[value="Прага"] ~ table tbody tr[direction="Прага"],
-.city-search[value="Нячанг"] ~ table tbody tr[direction="Нячанг"],
-.city-search[value="Шарм Эль Шейх"] ~ table tbody tr[direction="Шарм Эль Шейх"],
-.city-search[value="Уфа"] ~ table tbody tr[direction="Уфа"]
-{
-    display: table-row;
+    display: none !important;
 }
